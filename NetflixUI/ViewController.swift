@@ -14,9 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
 
     @IBOutlet weak var catStackView: UIStackView!
-    @IBOutlet weak var kategorilerTxtField: UITextField!
-    @IBOutlet weak var filmlerTxtField: UITextField!
-    @IBOutlet weak var dizilerTxtField: UITextField!
+
+    @IBOutlet weak var catBtn: UIButton!
+    @IBOutlet weak var filmlerBtn: UIButton!
+    @IBOutlet weak var DizilerBtn: UIButton!
     var filmlerListesi = [Filmler]()
 
     override func viewDidLoad() {
@@ -38,17 +39,6 @@ class ViewController: UIViewController {
         
         initialSetup()
         
-        dizilerTxtField.layer.borderColor = UIColor.lightGray.cgColor
-        dizilerTxtField.layer.borderWidth = 1.0
-        dizilerTxtField.layer.cornerRadius = 10
-        dizilerTxtField.layer.bounds.inset(by: UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))
-        
-      
-        
-        filmlerTxtField.layer.borderColor = UIColor.lightGray.cgColor
-        filmlerTxtField.layer.borderWidth = 1.0
-        filmlerTxtField.layer.cornerRadius = 10
-        filmlerTxtField.layer.bounds.inset(by: UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))
         
         imageView.layer.cornerRadius = 10
         imageView.layer.shadowColor = UIColor.black.cgColor
@@ -61,8 +51,25 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        DizilerBtn.layer.borderColor = UIColor.gray.cgColor
+        DizilerBtn.layer.borderWidth = 1
+        DizilerBtn.translatesAutoresizingMaskIntoConstraints = false
+        DizilerBtn.layer.cornerRadius = 17
+        DizilerBtn.titleLabel?.font = .systemFont(ofSize: 10)
+
         
+        catBtn.layer.borderColor = UIColor.gray.cgColor
+        catBtn.layer.borderWidth = 1
+        catBtn.translatesAutoresizingMaskIntoConstraints = false
+        catBtn.layer.cornerRadius = 17
+        catBtn.titleLabel?.font = .systemFont(ofSize: 10)
         
+        filmlerBtn.layer.borderColor = UIColor.gray.cgColor
+        filmlerBtn.layer.borderWidth = 1
+        filmlerBtn.translatesAutoresizingMaskIntoConstraints = false
+        filmlerBtn.layer.cornerRadius = 17
+        filmlerBtn.titleLabel?.font = .systemFont(ofSize: 10)
+
        
 
         
@@ -85,12 +92,12 @@ class ViewController: UIViewController {
         let gradientLayer = CAGradientLayer()
         
 
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor(red: 0.2, green: 0.0, blue: 0.0, alpha: 1.0).cgColor]
+        gradientLayer.colors = [UIColor.black.cgColor, UIColor(red: 0.3, green: 0.0, blue: 0.0, alpha: 1.0).cgColor]
 
-            gradientLayer.locations = [0.0, 0.5]
+        gradientLayer.locations = [0.0, 0.7]
             
-            gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
-            gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.5)
+            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+            gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.1)
             
             gradientLayer.frame = view.frame
             
