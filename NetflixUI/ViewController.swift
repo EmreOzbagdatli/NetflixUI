@@ -40,12 +40,12 @@ class ViewController: UIViewController {
         initialSetup()
         
         
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = 20
         imageView.layer.shadowColor = UIColor.black.cgColor
         imageView.layer.shadowOpacity = 0.5
-        imageView.layer.shadowOffset = CGSize(width: 4, height: 4)
+        imageView.layer.shadowOffset = CGSize(width: 7, height: 7)
         imageView.layer.shadowRadius = 5.0
-        imageView.layer.masksToBounds = true
+        imageView.layer.masksToBounds = false
         
         
         collectionView.delegate = self
@@ -94,10 +94,10 @@ class ViewController: UIViewController {
 
         gradientLayer.colors = [UIColor.black.cgColor, UIColor(red: 0.3, green: 0.0, blue: 0.0, alpha: 1.0).cgColor]
 
-        gradientLayer.locations = [0.0, 0.7]
+        gradientLayer.locations = [0.5, 0.7]
             
             gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-            gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.1)
+            gradientLayer.endPoint = CGPoint(x: 0.3,y: 0.7)
             
             gradientLayer.frame = view.frame
             

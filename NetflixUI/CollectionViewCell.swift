@@ -11,6 +11,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageCellCollectionViewCellImage: UIImageView!
 
+    @IBOutlet weak var colViewCellIcon: UIImageView!
     
 }
 
